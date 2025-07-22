@@ -93,6 +93,17 @@ h2 {
     text-align: center;
 }
 
+/* Profile Image */
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+    border-radius: 50%; /* Makes it circular */
+    border: 5px solid var(--primary-color);
+    display: block; /* Removes any extra space below the image */
+    margin: 0 auto; /* Centers the image if needed */
+}
+
 /* About Section */
 .about-content {
     display: flex;
