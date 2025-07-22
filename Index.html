@@ -1,1 +1,161 @@
-Index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Michael M. Borres | Database Systems Professional</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dynamic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>John Michael M. Borres</h1>
+            <p>Bachelor of Science in Database Systems</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="https://via.placeholder.com/200" alt="John Michael M. Borres" class="profile-img">
+                <div class="about-text">
+                    <p>Hello! I'm John Michael M. Borres, a recent graduate with a Bachelor of Science degree majoring in Database Systems. I'm passionate about designing, implementing, and optimizing database solutions that drive business success.</p>
+                    <p>My academic journey has equipped me with strong foundations in database management, data modeling, SQL programming, and data analytics. I'm eager to apply my knowledge to real-world challenges and continue growing as a database professional.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Database Technologies</h3>
+                    <ul>
+                        <li>SQL (MySQL, PostgreSQL, SQL Server)</li>
+                        <li>Database Design & Normalization</li>
+                        <li>ETL Processes</li>
+                        <li>NoSQL (MongoDB, Firebase)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <ul>
+                        <li>Microsoft SQL Server</li>
+                        <li>Oracle Database</li>
+                        <li>Tableau</li>
+                        <li>Git/GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Academic Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>University Library Database System</h3>
+                    <p>Designed and implemented a comprehensive relational database system for a university library with complex queries, stored procedures, and user access controls.</p>
+                    <span class="tech-used">MySQL, PHP, HTML/CSS</span>
+                </div>
+                <div class="project-card">
+                    <h3>Retail Analytics Data Warehouse</h3>
+                    <p>Developed a star schema data warehouse for a retail chain with ETL processes to transform operational data into analytical dimensions and facts.</p>
+                    <span class="tech-used">SQL Server, SSIS, Power BI</span>
+                </div>
+                <div class="project-card">
+                    <h3>Healthcare NoSQL Database</h3>
+                    <p>Created a document-based database solution for patient records with flexible schema to accommodate varying medical data structures.</p>
+                    <span class="tech-used">MongoDB, Express.js</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Science in Database Systems</h3>
+                <p class="institution">Your University Name</p>
+                <p class="date">Expected Graduation: Month Year</p>
+                <p class="details">Relevant coursework: Database Management Systems, Data Structures, Data Mining, Data Warehousing, Big Data Analytics, Web Development</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> john.borres@example.com</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Your City, Country</p>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; <span id="year"></span> John Michael M. Borres. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Update copyright year automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+    // Theme toggle functionality
+    const themeToggle = document.createElement('button');
+    themeToggle.className = 'theme-toggle';
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    document.body.appendChild(themeToggle);
+    
+    themeToggle.addEventListener('click', () => {
+        document.body.dataset.theme = document.body.dataset.theme === 'dark' ? '' : 'dark';
+        const icon = themeToggle.querySelector('i');
+        icon.className = document.body.dataset.theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    });
+</script>
+</body>
+</html>
