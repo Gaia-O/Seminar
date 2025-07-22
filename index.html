@@ -18,12 +18,18 @@
 
     <nav>
         <div class="container">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <div class="nav-brand">
+                <span class="nav-name">J.M. Borres</span>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -139,6 +145,29 @@
             <p>&copy; <span id="year"></span> John Michael M. Borres. All rights reserved.</p>
         </div>
     </footer>
+
+    // Nav Script
+    <script>
+    // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        navToggle.addEventListener('click', () => {
+            const visibility = navLinks.getAttribute('data-visible');
+            
+            if (visibility === "false") {
+                navLinks.setAttribute('data-visible', "true");
+                navToggle.setAttribute('aria-expanded', "true");
+            } else {
+                navLinks.setAttribute('data-visible', "false");
+                navToggle.setAttribute('aria-expanded', "false");
+            }
+        });
+        
+        // Initialize navigation state
+        navLinks.setAttribute('data-visible', "false");
+        navToggle.setAttribute('aria-expanded', "false");
+    </script>
 
     <script>
         // Update copyright year automatically
